@@ -1,0 +1,57 @@
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin ie11 {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+@mixin ios {
+  @supports (-webkit-touch-callout: none) {
+    @content;
+  }
+}
+
+@mixin mac {
+  @media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) {
+      @content;
+    }
+  }
+}
+
+@mixin mx1200 {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mx980 {
+  @media screen and (max-width: 980px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@function getsp($val) {
+  $result: (330/750) * $val;
+  @return $result;
+}
+
+@function getsp375($val) {
+  $result: (375/750) * $val;
+  @return $result;
+}
+
+@function getem($base-size, $illust-lheight) {
+  @return ($illust-lheight / $base-size) * 1em;
+}
