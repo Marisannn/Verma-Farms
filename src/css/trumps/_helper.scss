@@ -1,27 +1,15 @@
-.white {
-  color: $white;
-}
-
-.white-bg {
-  background: $white;
-}
-
-.black {
-  color: $black;
-}
-
-.black-bg {
-  background: $black;
-}
-
-.primary {
-  color: $primary;
-}
-
-.primary-bg {
-  background: $primary;
-}
-
 .overflow {
   overflow: hidden;
+}
+
+.pc {
+  @include mx980 {
+    display: none;
+  }
+}
+
+.sp {
+  @include mn981 {
+    display: none;
+  }
 }

@@ -1,0 +1,143 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5.4rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  z-index: 900;
+  transition: 0.3s ease;
+  @include mx980 {
+    padding: 2.2rem;
+    justify-content: space-between;
+  }
+
+  &__logo-image {
+    width: 22.7rem;
+    margin-right: 4.75rem;
+    flex-shrink: 0;
+    @include mx980 {
+      margin-right: 0;
+      width: 15.5rem;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    width: 100%;
+    transition: 0.3s ease;
+    @include mx980 {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      flex-direction: column;
+      background-color: $white;
+      top: 7.4rem;
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+
+  &__navigation-block {
+    @include mx980 {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    position: relative;
+    color: $almond-frost;
+    transition: 0.3s ease;
+    padding: 0.7rem 1.25rem;
+    @include mx980 {
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid $masala;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 0.2rem;
+      background-color: $almond-frost;
+      transform: scale(0);
+      transition: 0.5s ease;
+    }
+
+    &:hover {
+      &::after {
+        transform: scale(1);
+        @include mx980 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__cart {
+    width: 4.7rem;
+    height: 3.9rem;
+    font-size: 1.4rem;
+    padding-top: 0.4rem;
+    margin-left: 3.25rem;
+    background: {
+      image: url('/img/homepage/cart.svg');
+      size: 100%;
+      repeat: no-repeat;
+    }
+    @include center;
+    @include mx980 {
+      width: 3rem;
+      height: 3rem;
+      padding-top: 0.3rem
+    }
+  }
+
+  &__hamburger {
+    width: 3.5rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+
+  &__hamburger-line {
+    width: 100%;
+    height: 0.3rem;
+    background-color: $masala;
+    border-radius: 0.3rem;
+  }
+
+  &.scroll {
+    padding: 1rem 3rem;
+    background-color: $white;
+    border-bottom: 2px solid $masala;
+    @include mx980 {
+      padding: 1rem 2.2rem;
+    }
+
+    .header__navigation {
+      @include mx980 {
+        top: 5.2rem;
+      }
+    }
+  }
+
+  &.active {
+    .header__navigation {
+      @include mx980 {
+        max-height: 19.5rem;
+      }
+    }
+  }
+}
