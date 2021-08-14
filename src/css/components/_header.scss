@@ -116,6 +116,7 @@
     height: 0.3rem;
     background-color: $masala;
     border-radius: 0.3rem;
+    transition: 0.3s ease;
   }
 
   &.scroll {
@@ -137,6 +138,20 @@
     .header__navigation {
       @include mx980 {
         max-height: 19.5rem;
+      }
+    }
+
+    .header__hamburger-line {
+      &:first-child {
+        transform: rotate(-45deg) translate(-7px, 7px);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:last-child {
+        transform: rotate(45deg) translate(-4px, -6px);
       }
     }
   }

@@ -1,0 +1,21 @@
+.flickity-page-dots {
+  display: none;
+  @include mx980 {
+    display: flex;
+    align-items: center;
+    left: -3.8rem;
+  }
+
+  .dot {
+    opacity: 0;
+    width: 9.5rem;
+    height: 0.6rem;
+    background: $alto;
+    border-radius: 5px;
+    margin: 0;
+
+    &.is-selected {
+      opacity: 1;
+    }
+  }
+}

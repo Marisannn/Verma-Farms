@@ -5,15 +5,35 @@ html {
   background-color: $rose-white;
 }
 
+h1,
+h2 {
+  color: $masala;
+  font-weight: $extra-bold;
+}
+
 h1 {
   font-size: 5rem;
-  color: $masala;
   line-height: 1.2em;
-  font-weight: $extra-bold;
   @include mx1200 {
     font-size: 4.5rem;
   }
   @include mx980 {
     font-size: 2.2rem;
+  }
+}
+
+
+h2 {
+  font-size: 4rem;
+  @include mx980 {
+    font-size: 1.9rem;
+  }
+}
+
+h4 {
+  color: $masala;
+  font-size: 2rem;
+  @include mx980 {
+    font-size: 1.4rem;
   }
 }
