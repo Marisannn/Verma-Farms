@@ -1,0 +1,136 @@
+.footer {
+  &__upper {
+    width: 100%;
+    height: 24rem;
+    background-color: $almond;
+    padding: 0 13rem 0 8.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mx980 {
+      height: 10.4rem;
+      padding: 0 2.2rem;
+    }
+  }
+
+  &__back-top {
+    width: 24rem;
+    height: 5.5rem;
+    border-radius: 5px;
+    border: 1px solid $del-rio;
+    background-color: transparent;
+    cursor: pointer;
+    color: $del-rio;
+    font-size: 1.4rem;
+    transition: 0.3s ease;
+    outline: none;
+
+    &:hover {
+      background-color: $del-rio;
+      color: $white;
+    }
+  }
+
+  &__logo {
+    width: 13.7rem;
+    @include mx980 {
+      width: 6rem;
+    }
+  }
+
+  &__shop-link {
+    padding-right: 11.2rem;
+    color: $masala;
+    font-size: 4rem;
+    font-weight: $extra-bold;
+    transition: 0.3s ease;
+    background: {
+      image: url('/img/homepage/arrow.png');
+      position: right center;
+      size: 8.5rem auto;
+      repeat: no-repeat;
+    }
+    @include mx980 {
+      padding-right: 4.8rem;
+      font-size: 2rem;
+      background-size: 3.8rem auto;
+    }
+
+    &:hover {
+      background-position: right 10px center;
+      @include mx980 {
+        background-position: right 5px center;
+      }
+    }
+  }
+
+  &__lower {
+    background-color: $woodland;
+    padding: 9.3rem 0 8rem;
+    @include mx980 {
+      padding: 4.2rem 0 3.5rem;
+    }
+  }
+
+  &__main-links {
+    @include center;
+    flex-wrap: wrap;
+    margin-bottom: 10.2rem;
+    @include mx980 {
+      margin-bottom: 4.5rem;
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    margin: 0 10.25rem;
+    color: $white;
+    font-size: 2rem;
+    @include mx980 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    &:not(:last-child) {
+      @include mx980 {
+        margin-bottom: 3.5rem;
+      }
+    }
+
+    &--sub {
+      font-size: 1.8rem;
+      color: $camouflage-green;
+      margin: 0 2.5rem;
+      @include mx980 {
+        font-size: 1.4rem;
+        margin: 0;
+      }
+
+      &:not(:last-child) {
+        @include mx980 {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  &__logo-image {
+    width: 48rem;
+    display: block;
+    margin: 0 auto;
+    filter: brightness(0) invert(1);
+    @include mx980 {
+      width: 17.7rem;
+    }
+  }
+
+  &__sub-links {
+    @include center;
+    flex-wrap: wrap;
+    margin-top: 7.5rem;
+    @include mx980 {
+      margin-top: 1.8rem;
+      flex-direction: column;
+    }
+  }
+}
